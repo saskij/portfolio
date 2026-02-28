@@ -6,44 +6,41 @@ import { Button } from "@/components/ui/Button";
 
 export function Hero() {
     return (
-        <motion.section
-            initial="initial"
-            whileHover="hover"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
-        >
-            {/* Background Gradient Orbs */}
-            <motion.div
-                variants={{
-                    initial: { boxShadow: "0 0 250px 150px rgba(147, 51, 234, 0.15)" },
-                    hover: {
-                        boxShadow: [
-                            "0 0 250px 150px rgba(147, 51, 234, 0.15)",
-                            "0 0 250px 150px rgba(6, 182, 212, 0.15)",
-                            "0 0 250px 150px rgba(236, 72, 153, 0.15)",
-                            "0 0 250px 150px rgba(59, 130, 246, 0.15)",
-                            "0 0 250px 150px rgba(147, 51, 234, 0.15)"
-                        ],
-                        transition: { duration: 10, repeat: Infinity, ease: "linear" }
-                    }
-                }}
-                className="absolute top-1/3 left-1/3 w-0 h-0 pointer-events-none z-0 rounded-full"
-            />
-            <motion.div
-                variants={{
-                    initial: { boxShadow: "0 0 250px 150px rgba(37, 99, 235, 0.15)" },
-                    hover: {
-                        boxShadow: [
-                            "0 0 250px 150px rgba(37, 99, 235, 0.15)",
-                            "0 0 250px 150px rgba(147, 51, 234, 0.15)",
-                            "0 0 250px 150px rgba(6, 182, 212, 0.15)",
-                            "0 0 250px 150px rgba(236, 72, 153, 0.15)",
-                            "0 0 250px 150px rgba(37, 99, 235, 0.15)"
-                        ],
-                        transition: { duration: 10, repeat: Infinity, ease: "linear" }
-                    }
-                }}
-                className="absolute bottom-1/3 right-1/3 w-0 h-0 pointer-events-none z-0 rounded-full"
-            />
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+            {/* Background Atmospheric Glow */}
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center bg-black">
+                {/* Subtle Noise Texture */}
+                <div className="absolute inset-0 bg-noise opacity-[0.035] mix-blend-screen" />
+
+                {/* Layer 1: Base Ambient Glow (Broad, Deep Blue/Purple) */}
+                <motion.div
+                    animate={{
+                        opacity: [0.35, 0.55, 0.35],
+                        scale: [0.95, 1.05, 0.95]
+                    }}
+                    transition={{
+                        duration: 12,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }}
+                    className="absolute w-[120vw] h-[100vh] max-w-[1400px] max-h-[900px] rounded-full blur-[140px] bg-[radial-gradient(ellipse_at_center,rgba(49,46,129,0.3)_0%,rgba(88,28,135,0.15)_40%,transparent_80%)]"
+                />
+
+                {/* Layer 2: Core Focused Glow behind Headline (Slightly warmer, intense) */}
+                <motion.div
+                    animate={{
+                        opacity: [0.4, 0.7, 0.4],
+                        scale: [0.98, 1.02, 0.98]
+                    }}
+                    transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 1
+                    }}
+                    className="absolute top-[20%] w-[600px] h-[500px] md:w-[900px] md:h-[600px] rounded-full blur-[120px] bg-[radial-gradient(ellipse_at_center,rgba(159,18,57,0.22)_0%,rgba(109,40,217,0.18)_40%,transparent_70%)]"
+                />
+            </div>
 
             <div className="container px-6 md:px-12 z-10 text-center max-w-4xl mx-auto">
                 <motion.div
@@ -127,6 +124,6 @@ export function Hero() {
                     className="w-[1px] h-12 bg-gradient-to-b from-zinc-500 to-transparent"
                 />
             </motion.div>
-        </motion.section>
+        </section>
     );
 }
