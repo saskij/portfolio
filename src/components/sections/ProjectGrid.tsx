@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 export function ProjectGrid() {
     const gridItems = [
@@ -84,7 +85,7 @@ export function ProjectGrid() {
                                 <div className="absolute inset-0 border border-white/10 rounded-[24px] z-20 pointer-events-none mix-blend-overlay" />
 
                                 <Image
-                                    src={item.image}
+                                    src={getAssetPath(item.image)}
                                     alt={item.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
