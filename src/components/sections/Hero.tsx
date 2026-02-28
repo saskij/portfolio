@@ -15,7 +15,7 @@ export function Hero() {
                 {/* Layer 1: Base Ambient Glow (Broad, Deep Blue/Purple) */}
                 <motion.div
                     animate={{
-                        opacity: [0.35, 0.55, 0.35],
+                        opacity: [0.45, 0.71, 0.45],
                         scale: [0.95, 1.05, 0.95]
                     }}
                     transition={{
@@ -23,13 +23,13 @@ export function Hero() {
                         repeat: Infinity,
                         ease: "easeInOut"
                     }}
-                    className="absolute w-[120vw] h-[100vh] max-w-[1400px] max-h-[900px] rounded-full blur-[140px] bg-[radial-gradient(ellipse_at_center,rgba(49,46,129,0.3)_0%,rgba(88,28,135,0.15)_40%,transparent_80%)]"
+                    className="absolute w-[120vw] h-[100vh] max-w-[1400px] max-h-[900px] rounded-full blur-[140px] bg-[radial-gradient(ellipse_at_center,rgba(49,46,129,0.39)_0%,rgba(88,28,135,0.19)_40%,transparent_80%)]"
                 />
 
                 {/* Layer 2: Core Focused Glow behind Headline (Slightly warmer, intense) */}
                 <motion.div
                     animate={{
-                        opacity: [0.4, 0.7, 0.4],
+                        opacity: [0.52, 0.91, 0.52],
                         scale: [0.98, 1.02, 0.98]
                     }}
                     transition={{
@@ -38,7 +38,7 @@ export function Hero() {
                         ease: "easeInOut",
                         delay: 1
                     }}
-                    className="absolute top-[20%] w-[600px] h-[500px] md:w-[900px] md:h-[600px] rounded-full blur-[120px] bg-[radial-gradient(ellipse_at_center,rgba(159,18,57,0.22)_0%,rgba(109,40,217,0.18)_40%,transparent_70%)]"
+                    className="absolute top-[20%] w-[600px] h-[500px] md:w-[900px] md:h-[600px] rounded-full blur-[120px] bg-[radial-gradient(ellipse_at_center,rgba(159,18,57,0.28)_0%,rgba(109,40,217,0.23)_40%,transparent_70%)]"
                 />
             </div>
 
