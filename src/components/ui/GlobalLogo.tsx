@@ -4,6 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { getAssetPath } from "@/lib/utils";
+
 interface GlobalLogoProps {
     className?: string;
     priority?: boolean;
@@ -21,7 +23,7 @@ export function GlobalLogo({ className = "", priority = false }: GlobalLogoProps
         >
             <div className="relative w-full h-full">
                 <Image
-                    src="/images/Logo.svg"
+                    src={getAssetPath("/images/Logo.svg")}
                     alt="Logo"
                     fill
                     priority={priority}
