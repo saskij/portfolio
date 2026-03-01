@@ -66,59 +66,69 @@ export function ProjectGrid() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+                <div className="flex flex-col gap-32 md:gap-48">
                     {gridItems.map((item, index) => (
-                        <motion.a
+                        <motion.div
                             key={item.id}
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.7, delay: (index % 2) * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-                            className="group flex flex-col gap-8 outline-none"
+                            transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+                            className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-20 items-center`}
                         >
-                            {/* Image Container with Subtle Depth */}
-                            <div className="relative w-full aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5 shadow-2xl shadow-black/80">
-                                {/* Subtle Inner Glow Overlay for Premium Feel */}
+                            {/* Image Side - 60% width on Desktop */}
+                            <motion.a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.01 }}
+                                className="w-full md:w-[60%] group relative aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5 shadow-2xl transition-all duration-500"
+                            >
                                 <div className="absolute inset-0 border border-white/10 rounded-[24px] z-20 pointer-events-none mix-blend-overlay" />
-
                                 <Image
                                     src={getAssetPath(item.image)}
                                     alt={item.title}
                                     fill
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                    className="object-cover group-hover:scale-[1.03] transition-transform duration-[800ms] ease-[0.21,0.47,0.32,0.98] transform-gpu will-change-transform z-10"
+                                    sizes="(max-width: 768px) 100vw, 60vw"
+                                    className="object-cover group-hover:scale-[1.03] transition-transform duration-[1000ms] ease-[0.21,0.47,0.32,0.98] transform-gpu will-change-transform z-10"
                                 />
-                            </div>
+                            </motion.a>
 
-                            {/* Content Details */}
-                            <div className="flex flex-col gap-4 px-2">
-                                <div className="flex items-start justify-between gap-4">
-                                    <h3 className="text-3xl font-bold text-white group-hover:text-zinc-300 transition-colors duration-300 tracking-tight">
+                            {/* Content Side - 40% width on Desktop */}
+                            <div className="w-full md:w-[40%] flex flex-col gap-6 md:gap-8">
+                                <div className="flex flex-col gap-3">
+                                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
                                         {item.title}
                                     </h3>
-                                    <div className="flex items-center gap-2 text-zinc-400 group-hover:text-white transition-colors duration-300 mt-1.5 shrink-0">
-                                        <span className="text-sm font-semibold tracking-wide uppercase">Live Site</span>
-                                        <ExternalLink className="w-4 h-4" />
+                                    <div className="flex flex-wrap items-center gap-2 mt-2">
+                                        {item.techStack.map((tech) => (
+                                            <span
+                                                key={tech}
+                                                className="px-4 py-1.5 text-[10px] md:text-xs font-bold tracking-widest text-zinc-400 uppercase bg-white/5 border border-white/10 rounded-full"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
-                                <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">
+
+                                <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-xl">
                                     {item.description}
                                 </p>
-                                <div className="flex flex-wrap items-center gap-2 mt-2">
-                                    {item.techStack.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-4 py-1.5 text-xs font-semibold tracking-wide text-zinc-300 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
+
+                                <div className="pt-4">
+                                    <a
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-3 text-white font-semibold group/link border-b border-white/20 pb-2 hover:border-white transition-all duration-300"
+                                    >
+                                        <span className="text-lg">Explory Case Study</span>
+                                        <ExternalLink className="w-5 h-5 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" />
+                                    </a>
                                 </div>
                             </div>
-                        </motion.a>
+                        </motion.div>
                     ))}
                 </div>
             </div>
