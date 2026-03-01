@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { GlobalLogo } from "@/components/ui/GlobalLogo";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -9,8 +10,8 @@ export function Footer() {
         <footer className="border-t border-white/10 bg-black py-12 md:py-16">
             <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col items-center md:items-start gap-2">
-                    <Link href="/" className="text-2xl font-bold tracking-tight text-white">
-                        ASHA.
+                    <Link href="/" className="z-[60] relative flex items-center group h-[120px] w-auto aspect-[422/396]">
+                        <GlobalLogo className="w-full h-full" />
                     </Link>
                     <p className="text-sm text-zinc-500 text-center md:text-left max-w-xs">
                         Designing and building premium digital experiences for forward-thinking brands.
