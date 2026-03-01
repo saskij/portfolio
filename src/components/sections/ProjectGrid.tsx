@@ -39,14 +39,6 @@ export function ProjectGrid() {
             image: "/images/projects/rsm.png",
             link: "https://rsmidaho.com"
         },
-        {
-            id: 5,
-            title: "Portfolio Development",
-            description: "**Problem:** I needed a custom platform to showcase my technical growth and projects without relying on generic templates.\n\n**Solution:** I engineered this site from scratch, focusing on modular components and intentional UI animations.\n\n**Tech:** Next.js and Framer Motion, with automated deployment pipelines via GitHub Actions.\n\n**Result:** A maintainable, responsive showcase that accurately reflects my work and development standards.",
-            techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "CI/CD"],
-            image: "/images/about/engineering-empathy-premium.jpg",
-            link: "#"
-        }
     ];
 
     return (
