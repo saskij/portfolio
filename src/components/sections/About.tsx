@@ -18,43 +18,33 @@ export function About() {
                         className="order-2 md:order-1"
                     >
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
-                            Grounded in <span className="text-zinc-500">learning.</span>
+                            Driven by <span className="text-zinc-500">intent.</span>
                         </h2>
                         <div className="space-y-6 text-lg text-zinc-400">
                             <p>
-                                I am a self-taught web developer who believes that clear communication and reliable code are the foundation of every successful project. My journey is defined by curiosity and a commitment to building practical solutions that work for people.
+                                I am a web developer focused on building reliable, well-designed applications that solve real-world challenges for small businesses and startups. I believe that good software is the result of clarity, consistent communication, and a focus on the user&apos;s actual needs.
                             </p>
 
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
                                     <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-zinc-500 shrink-0" />
-                                    <span><strong>Continuous Learning:</strong> I actively stay updated with modern tools and best practices to ensure your projects are built on a solid, current foundation.</span>
+                                    <span><strong>Clarity and Design:</strong> I prioritize clean, intuitive user interfaces that make complex tasks feel simple and straightforward.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-zinc-500 shrink-0" />
-                                    <span><strong>Reliability:</strong> I take pride in being a dependable partner for small businesses, delivering what I promise with attention to detail.</span>
+                                    <span><strong>Maintainable Code:</strong> I focus on writing clear, organized code that is easy to manage and scale as your business grows.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-zinc-500 shrink-0" />
-                                    <span><strong>Problem Solving:</strong> My focus is on understanding your actual needs and building straightforward, maintainable applications that solve real-world challenges.</span>
+                                    <span><strong>Reliable Partnership:</strong> I take pride in being a dependable developer who delivers intentional work with strong attention to detail.</span>
                                 </li>
                             </ul>
 
                             <p>
-                                I don&apos;t claim to have decades of enterprise experience, but I do promise a high level of intentionality in everything I build. I am constantly refining my craft and looking for ways to improve both my code and the user experience it creates.
+                                I am dedicated to steady improvement and refining my craft with every project. My goal is to deliver honest work that provides immediate value while maintaining a focus on long-term stability and growth.
                             </p>
                         </div>
 
-                        <div className="mt-10 grid grid-cols-2 gap-6">
-                            <div>
-                                <h4 className="text-4xl font-bold text-white mb-2">Honest</h4>
-                                <p className="text-sm text-zinc-500">Approach</p>
-                            </div>
-                            <div>
-                                <h4 className="text-4xl font-bold text-white mb-2">Growth</h4>
-                                <p className="text-sm text-zinc-500">Mindset</p>
-                            </div>
-                        </div>
                     </motion.div>
 
                     {/* Abstract Image or Element */}
