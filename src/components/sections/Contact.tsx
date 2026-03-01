@@ -29,8 +29,8 @@ export function Contact() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
                     >
-                        Let's build something <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">extraordinary.</span>
+                        Let&apos;s talk about your <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-500 text-zinc-500">next project.</span>
                     </motion.h2>
 
                     <motion.p
@@ -40,7 +40,7 @@ export function Contact() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-lg md:text-xl text-zinc-400 mb-12 max-w-2xl"
                     >
-                        Whether you are launching a new product or need to elevate your growing business — I&apos;m ready to help you execute.
+                        I help growing businesses build reliable and well-designed web applications. I&apos;m currently accepting new projects and typically respond to all inquiries within 24 hours.
                     </motion.p>
 
                     <motion.form
@@ -72,7 +72,7 @@ export function Contact() {
                             required
                         ></textarea>
                         <Button size="lg" className="w-full">
-                            Send Message
+                            Start a Conversation
                         </Button>
                     </motion.form>
                 </div>
