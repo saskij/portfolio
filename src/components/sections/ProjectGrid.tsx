@@ -10,7 +10,7 @@ export function ProjectGrid() {
         {
             id: 1,
             title: "Cool Mountain Logistics",
-            description: "An enterprise-scale logistics architecture engineered for streamlined driver recruitment and sophisticated freight operations. Built on a modern React stack with fluid micro-interactions and a confident dark-mode aesthetic.",
+            description: "**Problem:** The company needed a professional way to attract drivers and manage freight inquiries without a complex backend.\n\n**Solution:** I built a clean, dark-themed landing page that highlights their services and provides a direct intake form.\n\n**Tech:** Next.js and Framer Motion for subtle transitions that keep the focus on the content.\n\n**Result:** Improved brand credibility and a simplified driver application process.",
             techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
             image: "/images/projects/coolmountain.png",
             link: "https://saskij.github.io/Coolmountain/"
@@ -18,7 +18,7 @@ export function ProjectGrid() {
         {
             id: 2,
             title: "New Path Logistics",
-            description: "A high-conversion digital presence for modern freight operations. Architected for peak performance, featuring dynamic service routing, interactive metrics, and seamless deployment pipelines.",
+            description: "**Problem:** A startup in a competitive freight market needed to clearly communicate their operational metrics and reliability.\n\n**Solution:** I designed a performance-focused site with a metric dashboard view to showcase their efficiency.\n\n**Tech:** Next.js and Tailwind CSS prioritized fast load times and a consistent mobile-first experience.\n\n**Result:** A reliable digital introduction for new logistics partners.",
             techStack: ["Next.js", "React", "Framer Motion", "Vercel"],
             image: "/images/projects/newpath.png",
             link: "https://www.newpathlogisticllc.com"
@@ -26,7 +26,7 @@ export function ProjectGrid() {
         {
             id: 3,
             title: "Honor Auto Detailing",
-            description: "A cinematic booking experience designed for the luxury automotive sector. Engineered with refined scroll animations, a bespoke dark UI system, and an optimized conversion funnel.",
+            description: "**Problem:** A luxury detailing service required a portfolio that reflected their high level of craft and attention to detail.\n\n**Solution:** I created a cinematic, dark-themed gallery and service structure mirroring the premium feel of their work.\n\n**Tech:** Built with Next.js, focusing on custom CSS animations for a polished user journey.\n\n**Result:** Successfully guided customers from viewing work to requesting specialized quotes.",
             techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "Stripe API"],
             image: "/images/projects/honor.png",
             link: "https://www.honorautodetailing.com"
@@ -34,15 +34,15 @@ export function ProjectGrid() {
         {
             id: 4,
             title: "Revive & Shine",
-            description: "A dynamic service catalog and interactive pricing engine. Developed with a focus on unparalleled performance, mobile-first responsiveness, and automated scheduling workflows.",
+            description: "**Problem:** A service business struggled to manage varied upholstery cleaning tiers and pricing clarity on a single page.\n\n**Solution:** I developed an interactive service catalog that categorizes their work and clarifies pricing.\n\n**Tech:** React and Lucide icons provided a functional, easy-to-navigate interface for mobile users.\n\n**Result:** Reduced customer confusion and provided a clear source of truth for service levels.",
             techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
             image: "/images/projects/rsm.png",
             link: "https://rsmidaho.com"
         },
         {
             id: 5,
-            title: "Engineering with Empathy",
-            description: "The architectural foundation of this digital portfolio. A continuous exploration of bridging complex technical engineering with premium, editorial-grade design systems and fluid physics-based animations.",
+            title: "Portfolio Development",
+            description: "**Problem:** I needed a custom platform to showcase my technical growth and projects without relying on generic templates.\n\n**Solution:** I engineered this site from scratch, focusing on modular components and intentional UI animations.\n\n**Tech:** Next.js and Framer Motion, with automated deployment pipelines via GitHub Actions.\n\n**Result:** A maintainable, responsive showcase that accurately reflects my work and development standards.",
             techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "CI/CD"],
             image: "/images/about/engineering-empathy-premium.jpg",
             link: "#"
