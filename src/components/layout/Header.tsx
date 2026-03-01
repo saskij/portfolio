@@ -4,6 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { LogoAnimation } from "@/components/ui/LogoAnimation";
+
 export function Header() {
     const [isScrolled, setIsScrolled] = React.useState(false);
     const [menuOpen, setMenuOpen] = React.useState(false);
@@ -44,17 +46,17 @@ export function Header() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className={`fixed top-0 left-0 right-0 z-[60] flex h-24 items-center justify-between px-6 md:px-12 transition-all duration-500 transform-gpu ${isScrolled && !menuOpen
-                        ? "bg-black/60 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/50"
-                        : "bg-transparent"
+                    ? "bg-black/60 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/50"
+                    : "bg-transparent"
                     }`}
             >
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="text-2xl font-extrabold tracking-tighter text-white hover:text-zinc-300 transition-colors z-[60] relative"
+                    className="z-[60] relative flex items-center group"
                     onClick={closeMenu}
                 >
-                    ASHA.
+                    <LogoAnimation />
                 </Link>
 
                 {/* Right Actions: CTA + Menu Trigger */}
