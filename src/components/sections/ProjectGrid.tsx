@@ -38,6 +38,14 @@ export function ProjectGrid() {
             techStack: ["Next.js", "Tailwind CSS", "Vercel"],
             image: "/images/projects/rsm.png",
             link: "https://rsmidaho.com"
+        },
+        {
+            id: 5,
+            title: "Engineering with Empathy",
+            description: "A showcase of recent projects bridging complex engineering and premium design.",
+            techStack: ["React", "Motion", "Design Systems"],
+            image: "/images/about/engineering-empathy-premium.jpg",
+            link: "#"
         }
     ];
 
