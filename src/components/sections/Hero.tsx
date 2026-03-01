@@ -81,7 +81,7 @@ export function Hero() {
                         }}
                         className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-zinc-300 mb-6 cursor-pointer"
                     >
-                        Available for new opportunities
+                        Available for new projects
                     </motion.span>
                 </motion.div>
 
@@ -89,18 +89,18 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70"
+                    className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 leading-[1.1]"
                 >
-                    Frontend Engineer & <br className="hidden md:block" /> UI/UX Designer.
+                    Modern Web Apps <br className="hidden md:block" /> for Growing Businesses.
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto"
+                    className="text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed"
                 >
-                    I build high-performance web applications that merge stunning design with solid engineering. Let&apos;s create something extraordinary.
+                    I build reliable, well-designed web applications. My focus is on writing maintainable code and delivering clean user interfaces that help startups and small businesses succeed online.
                 </motion.p>
 
                 <motion.div
