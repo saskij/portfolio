@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { LogoAnimation } from "@/components/ui/LogoAnimation";
+import { GlobalLogo } from "@/components/ui/GlobalLogo";
 import { useLogo } from "@/context/LogoContext";
 
 export function Header() {
@@ -50,18 +50,15 @@ export function Header() {
                     y: 0
                 }}
                 transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-                className={`fixed top-0 left-0 right-0 z-[60] flex h-24 items-center justify-between px-6 md:px-12 transition-all duration-500 transform-gpu ${isScrolled && !menuOpen && isSplashComplete
-                    ? "bg-black/60 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/50"
-                    : "bg-transparent"
-                    }`}
+                className={`absolute top-0 left-0 right-0 z-[60] flex h-32 items-center justify-between px-6 md:px-12 transition-all duration-500 transform-gpu bg-transparent`}
             >
                 {/* Logo - Always rendered for shared layoutId */}
                 <Link
                     href="/"
-                    className="z-[60] relative flex items-center group"
+                    className="z-[60] relative flex items-center group h-[120px] w-auto aspect-[422/396]"
                     onClick={closeMenu}
                 >
-                    <LogoAnimation isSplash={false} />
+                    <GlobalLogo className="w-full h-full" />
                 </Link>
 
                 {/* Right Actions - Only show when splash is complete */}
