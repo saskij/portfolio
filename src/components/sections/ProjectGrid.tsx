@@ -10,7 +10,10 @@ export function ProjectGrid() {
         {
             id: 1,
             title: "Cool Mountain Logistics",
-            description: "**Problem:** The company needed a professional way to attract drivers and manage freight inquiries without a complex backend.\n\n**Solution:** I built a clean, dark-themed landing page that highlights their services and provides a direct intake form.\n\n**Tech:** Next.js and Framer Motion for subtle transitions that keep the focus on the content.\n\n**Result:** Improved brand credibility and a simplified driver application process.",
+            problem: "The company needed a professional way to attract drivers and manage freight inquiries without a complex backend.",
+            solution: "I built a clean, dark-themed landing page that highlights their services and provides a direct intake form.",
+            technology: "Next.js and Framer Motion for subtle transitions that keep the focus on the content.",
+            result: "Improved brand credibility and a simplified driver application process.",
             techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
             image: "/images/projects/coolmountain.png",
             link: "https://saskij.github.io/Coolmountain/"
@@ -18,7 +21,10 @@ export function ProjectGrid() {
         {
             id: 2,
             title: "New Path Logistics",
-            description: "**Problem:** A startup in a competitive freight market needed to clearly communicate their operational metrics and reliability.\n\n**Solution:** I designed a performance-focused site with a metric dashboard view to showcase their efficiency.\n\n**Tech:** Next.js and Tailwind CSS prioritized fast load times and a consistent mobile-first experience.\n\n**Result:** A reliable digital introduction for new logistics partners.",
+            problem: "A startup in a competitive freight market needed to clearly communicate their operational metrics and reliability.",
+            solution: "I designed a performance-focused site with a metric dashboard view to showcase their efficiency.",
+            technology: "Next.js and Tailwind CSS prioritized fast load times and a consistent mobile-first experience.",
+            result: "A reliable digital introduction for new logistics partners.",
             techStack: ["Next.js", "React", "Framer Motion", "Vercel"],
             image: "/images/projects/newpath.png",
             link: "https://www.newpathlogisticllc.com"
@@ -26,7 +32,10 @@ export function ProjectGrid() {
         {
             id: 3,
             title: "Honor Auto Detailing",
-            description: "**Problem:** A luxury detailing service required a portfolio that reflected their high level of craft and attention to detail.\n\n**Solution:** I created a cinematic, dark-themed gallery and service structure mirroring the premium feel of their work.\n\n**Tech:** Built with Next.js, focusing on custom CSS animations for a polished user journey.\n\n**Result:** Successfully guided customers from viewing work to requesting specialized quotes.",
+            problem: "A luxury detailing service required a portfolio that reflected their high level of craft and attention to detail.",
+            solution: "I created a cinematic, dark-themed gallery and service structure mirroring the premium feel of their work.",
+            technology: "Built with Next.js, focusing on custom CSS animations for a polished user journey.",
+            result: "Successfully guided customers from viewing work to requesting specialized quotes.",
             techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "Stripe API"],
             image: "/images/projects/honor.png",
             link: "https://www.honorautodetailing.com"
@@ -34,7 +43,10 @@ export function ProjectGrid() {
         {
             id: 4,
             title: "Revive & Shine",
-            description: "**Problem:** A service business struggled to manage varied upholstery cleaning tiers and pricing clarity on a single page.\n\n**Solution:** I developed an interactive service catalog that categorizes their work and clarifies pricing.\n\n**Tech:** React and Lucide icons provided a functional, easy-to-navigate interface for mobile users.\n\n**Result:** Reduced customer confusion and provided a clear source of truth for service levels.",
+            problem: "A service business struggled to manage varied upholstery cleaning tiers and pricing clarity on a single page.",
+            solution: "I developed an interactive service catalog that categorizes their work and clarifies pricing.",
+            technology: "React and Lucide icons provided a functional, easy-to-navigate interface for mobile users.",
+            result: "Reduced customer confusion and provided a clear source of truth for service levels.",
             techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
             image: "/images/projects/rsm.png",
             link: "https://rsmidaho.com"
@@ -50,7 +62,7 @@ export function ProjectGrid() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
+                            className="text-3xl md:text-4xl font-bold tracking-tight mb-4"
                         >
                             Selected <span className="text-zinc-500">Works.</span>
                         </motion.h2>
@@ -59,7 +71,7 @@ export function ProjectGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-lg text-zinc-400"
+                            className="text-base md:text-lg text-zinc-400"
                         >
                             A showcase of recent projects bridging complex engineering and premium design.
                         </motion.p>
@@ -89,14 +101,14 @@ export function ProjectGrid() {
                                     alt={item.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 60vw"
-                                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out transform-gpu will-change-transform z-10"
+                                    className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out transform-gpu will-change-transform z-10"
                                 />
                             </motion.a>
 
                             {/* Content Side - 40% width on Desktop */}
                             <div className="w-full md:w-[40%] flex flex-col gap-6 md:gap-8">
                                 <div className="flex flex-col gap-3">
-                                    <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05]">
+                                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.05]">
                                         {item.title}
                                     </h3>
                                     <div className="flex flex-wrap items-center gap-2 mt-2">
@@ -111,9 +123,12 @@ export function ProjectGrid() {
                                     </div>
                                 </div>
 
-                                <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-xl">
-                                    {item.description}
-                                </p>
+                                <div className="flex flex-col gap-4 text-zinc-400 text-base md:text-lg leading-relaxed max-w-xl">
+                                    <p><strong className="text-zinc-200">Problem:</strong> {item.problem}</p>
+                                    <p><strong className="text-zinc-200">Solution:</strong> {item.solution}</p>
+                                    <p><strong className="text-zinc-200">Tech:</strong> {item.technology}</p>
+                                    <p><strong className="text-zinc-200">Result:</strong> {item.result}</p>
+                                </div>
 
                                 <div className="pt-4">
                                     <a
@@ -122,7 +137,7 @@ export function ProjectGrid() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-3 text-white font-semibold group/link border-b border-white/20 pb-2 hover:border-white transition-all duration-300"
                                     >
-                                        <span className="text-lg">Explory Case Study</span>
+                                        <span className="text-lg">Explore Case Study</span>
                                         <ExternalLink className="w-5 h-5 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" />
                                     </a>
                                 </div>
