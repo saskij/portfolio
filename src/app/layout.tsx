@@ -23,6 +23,9 @@ export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
+import { LogoProvider } from "@/context/LogoContext";
+import { SplashScreen } from "@/components/ui/SplashScreen";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,8 +36,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
       >
-        <ScrollToTop />
-        {children}
+        <LogoProvider>
+          <SplashScreen />
+          <ScrollToTop />
+          {children}
+        </LogoProvider>
       </body>
     </html>
   );

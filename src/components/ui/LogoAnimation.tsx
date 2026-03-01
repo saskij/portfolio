@@ -3,16 +3,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export function LogoAnimation() {
+export function LogoAnimation({ isSplash = false }: { isSplash?: boolean }) {
     // Elegant, smooth timing configuration
     const bezier1: [number, number, number, number] = [0.16, 1, 0.3, 1];
     const bezier2: [number, number, number, number] = [0.25, 1, 0.5, 1];
     const transitionGrid = { duration: 1, ease: bezier1 };
-    const transitionDraw = { duration: 1.2, ease: bezier2, delay: 1.2 };
-    const transitionFade = { duration: 0.8, ease: "easeOut" as const, delay: 2.5 };
+    const transitionDraw = { duration: 1.2, ease: bezier2, delay: isSplash ? 0.1 : 0 };
+    const transitionFade = { duration: 0.8, ease: "easeOut" as const, delay: isSplash ? 1.4 : 0 };
 
     return (
-        <div className="relative w-12 h-12 flex items-center justify-center -ml-2">
+        <motion.div
+            layoutId="logo-container"
+            transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+            className={`relative flex items-center ${isSplash ? "h-[60vh] w-[60vh]" : "w-12 h-12 -ml-2"}`}
+        >
             <svg
                 viewBox="0 0 100 100"
                 className="w-full h-full overflow-visible"
@@ -112,11 +116,11 @@ export function LogoAnimation() {
             <motion.span
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 3, ease: "easeOut" }}
-                className="absolute left-[52px] text-2xl font-extrabold tracking-tighter text-white whitespace-nowrap"
+                transition={{ duration: 0.8, delay: isSplash ? 1.5 : 0, ease: "easeOut" }}
+                className={`text-2xl font-extrabold tracking-tighter text-white whitespace-nowrap ${isSplash ? "ml-8" : "ml-4"}`}
             >
                 ASHA.
             </motion.span>
-        </div>
+        </motion.div>
     );
 }

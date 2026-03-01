@@ -5,10 +5,12 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { LogoAnimation } from "@/components/ui/LogoAnimation";
+import { useLogo } from "@/context/LogoContext";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = React.useState(false);
     const [menuOpen, setMenuOpen] = React.useState(false);
+    const { isSplashComplete } = useLogo();
 
     React.useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -42,25 +44,33 @@ export function Header() {
     return (
         <>
             <motion.header
-                initial={{ y: -100 }}
-                animate={{ y: 0 }}
+                initial={false}
+                animate={{
+                    opacity: isSplashComplete ? 1 : 1,
+                    y: 0
+                }}
                 transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-                className={`fixed top-0 left-0 right-0 z-[60] flex h-24 items-center justify-between px-6 md:px-12 transition-all duration-500 transform-gpu ${isScrolled && !menuOpen
+                className={`fixed top-0 left-0 right-0 z-[60] flex h-24 items-center justify-between px-6 md:px-12 transition-all duration-500 transform-gpu ${isScrolled && !menuOpen && isSplashComplete
                     ? "bg-black/60 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/50"
                     : "bg-transparent"
                     }`}
             >
-                {/* Logo */}
+                {/* Logo - Always rendered for shared layoutId */}
                 <Link
                     href="/"
                     className="z-[60] relative flex items-center group"
                     onClick={closeMenu}
                 >
-                    <LogoAnimation />
+                    <LogoAnimation isSplash={false} />
                 </Link>
 
-                {/* Right Actions: CTA + Menu Trigger */}
-                <div className="flex items-center gap-6 md:gap-8 z-[60]">
+                {/* Right Actions - Only show when splash is complete */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: isSplashComplete ? 1 : 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="flex items-center gap-6 md:gap-8 z-[60]"
+                >
                     <motion.a
                         href="#contact"
                         whileHover={{ scale: 1.05 }}
@@ -100,7 +110,7 @@ export function Header() {
                             />
                         </div>
                     </button>
-                </div>
+                </motion.div>
             </motion.header>
 
             {/* Fullscreen Premium Overlay Navigation */}
