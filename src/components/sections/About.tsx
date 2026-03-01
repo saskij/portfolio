@@ -53,7 +53,7 @@ export function About() {
                         className="order-1 md:order-2 relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden glass-card border-white/10"
                     >
                         <Image
-                            src={getAssetPath("/images/about-ui.jpg")}
+                            src={getAssetPath("/images/about/engineering-empathy.jpg")}
                             alt="Engineering UI components"
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
