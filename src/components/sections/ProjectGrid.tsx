@@ -74,7 +74,7 @@ export function ProjectGrid() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-32 md:gap-48">
+                <div className="flex flex-col gap-48 md:gap-72">
                     {gridItems.map((item, index) => (
                         <motion.div
                             key={item.id}
@@ -90,22 +90,21 @@ export function ProjectGrid() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ scale: 1.01 }}
-                                className="w-full md:w-[60%] group relative aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5 shadow-2xl transition-all duration-500"
+                                className="w-full md:w-[60%] group relative aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5 transition-all duration-500"
                             >
-                                <div className="absolute inset-0 border border-white/10 rounded-[24px] z-20 pointer-events-none mix-blend-overlay" />
                                 <Image
                                     src={getAssetPath(item.image)}
                                     alt={item.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 60vw"
-                                    className="object-cover group-hover:scale-[1.03] transition-transform duration-[1000ms] ease-[0.21,0.47,0.32,0.98] transform-gpu will-change-transform z-10"
+                                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out transform-gpu will-change-transform z-10"
                                 />
                             </motion.a>
 
                             {/* Content Side - 40% width on Desktop */}
                             <div className="w-full md:w-[40%] flex flex-col gap-6 md:gap-8">
                                 <div className="flex flex-col gap-3">
-                                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
+                                    <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05]">
                                         {item.title}
                                     </h3>
                                     <div className="flex flex-wrap items-center gap-2 mt-2">
