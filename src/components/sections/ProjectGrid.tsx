@@ -10,40 +10,40 @@ export function ProjectGrid() {
         {
             id: 1,
             title: "Cool Mountain Logistics",
-            description: "Premium logistics portal featuring professional driver recruitment and complex freight solutions.",
-            techStack: ["Next.js", "React", "Tailwind CSS"],
+            description: "An enterprise-scale logistics architecture engineered for streamlined driver recruitment and sophisticated freight operations. Built on a modern React stack with fluid micro-interactions and a confident dark-mode aesthetic.",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
             image: "/images/projects/coolmountain.png",
             link: "https://saskij.github.io/Coolmountain/"
         },
         {
             id: 2,
             title: "New Path Logistics",
-            description: "Modern trucking operations website with clear performance metrics and service overviews.",
-            techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
+            description: "A high-conversion digital presence for modern freight operations. Architected for peak performance, featuring dynamic service routing, interactive metrics, and seamless deployment pipelines.",
+            techStack: ["Next.js", "React", "Framer Motion", "Vercel"],
             image: "/images/projects/newpath.png",
             link: "https://www.newpathlogisticllc.com"
         },
         {
             id: 3,
             title: "Honor Auto Detailing",
-            description: "High-end auto detailing service platform with a dark, premium aesthetic.",
-            techStack: ["React", "Tailwind CSS", "Vercel"],
+            description: "A cinematic booking experience designed for the luxury automotive sector. Engineered with refined scroll animations, a bespoke dark UI system, and an optimized conversion funnel.",
+            techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "Stripe API"],
             image: "/images/projects/honor.png",
             link: "https://www.honorautodetailing.com"
         },
         {
             id: 4,
             title: "Revive & Shine",
-            description: "Upholstery and interior cleaning showcase with dynamic pricing and service sections.",
-            techStack: ["Next.js", "Tailwind CSS", "Vercel"],
+            description: "A dynamic service catalog and interactive pricing engine. Developed with a focus on unparalleled performance, mobile-first responsiveness, and automated scheduling workflows.",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
             image: "/images/projects/rsm.png",
             link: "https://rsmidaho.com"
         },
         {
             id: 5,
             title: "Engineering with Empathy",
-            description: "A showcase of recent projects bridging complex engineering and premium design.",
-            techStack: ["React", "Motion", "Design Systems"],
+            description: "The architectural foundation of this digital portfolio. A continuous exploration of bridging complex technical engineering with premium, editorial-grade design systems and fluid physics-based animations.",
+            techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "CI/CD"],
             image: "/images/about/engineering-empathy-premium.jpg",
             link: "#"
         }
