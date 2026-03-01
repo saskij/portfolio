@@ -50,18 +50,18 @@ export function ProjectGrid() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 text-white leading-tight"
+                            className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
                         >
-                            Selected <span className="text-zinc-600 block sm:inline">Case Studies.</span>
+                            Selected <span className="text-zinc-500">Works.</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-xl text-zinc-400 font-medium leading-relaxed max-w-2xl"
+                            className="text-lg text-zinc-400"
                         >
-                            A curated showcase of recent high-end web implementations, focusing on aesthetic precision, modern architecture, and performance.
+                            A showcase of recent projects bridging complex engineering and premium design.
                         </motion.p>
                     </div>
                 </div>
