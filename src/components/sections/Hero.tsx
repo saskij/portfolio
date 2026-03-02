@@ -5,6 +5,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
+    const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+        const target = targetId.startsWith('#') ? targetId.substring(1) : targetId;
+        const element = document.getElementById(target);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            window.history.pushState(null, '', `#${target}`);
+        }
+    };
+
     return (
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
             {/* Background Atmospheric Glow */}
@@ -109,16 +119,16 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <Link href="#work" className="w-full sm:w-auto">
-                        <Button size="lg" className="w-full">
+                    <a href="#work" onClick={(e) => handleScrollTo(e, '#work')} className="w-full sm:w-auto">
+                        <Button size="lg" className="w-full hover:scale-[1.02] transition-transform">
                             View My Work
                         </Button>
-                    </Link>
-                    <Link href="#contact" className="w-full sm:w-auto">
-                        <Button size="lg" variant="outline" className="w-full">
+                    </a>
+                    <a href="#contact" onClick={(e) => handleScrollTo(e, '#contact')} className="w-full sm:w-auto">
+                        <Button size="lg" variant="outline" className="w-full hover:scale-[1.02] transition-transform">
                             Contact Me
                         </Button>
-                    </Link>
+                    </a>
                 </motion.div>
             </div>
 

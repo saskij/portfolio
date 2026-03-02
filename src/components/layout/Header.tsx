@@ -41,6 +41,19 @@ export function Header() {
     const toggleMenu = () => setMenuOpen((prev) => !prev);
     const closeMenu = () => setMenuOpen(false);
 
+    const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+        closeMenu();
+        const target = targetId.startsWith('#') ? targetId.substring(1) : targetId;
+        setTimeout(() => {
+            const element = document.getElementById(target);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                window.history.pushState(null, '', `#${target}`);
+            }
+        }, 50);
+    };
+
     return (
         <>
             <motion.header
@@ -72,8 +85,8 @@ export function Header() {
                         href="#contact"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
-                        className="hidden sm:inline-block rounded-full bg-white px-6 py-2.5 text-sm font-semibold tracking-wide text-black hover:bg-zinc-200 transition-colors"
-                        onClick={closeMenu}
+                        className="hidden sm:inline-block rounded-full bg-white px-6 py-2.5 text-sm font-semibold tracking-wide text-black hover:bg-zinc-200 transition-colors cursor-pointer"
+                        onClick={(e) => handleScrollTo(e as any, "#contact")}
                     >
                         Let&apos;s Talk
                     </motion.a>
@@ -133,10 +146,10 @@ export function Header() {
                                     transition={{ delay: 0.1 + i * 0.05, duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
                                     className="overflow-hidden w-full flex justify-center"
                                 >
-                                    <Link
+                                    <a
                                         href={link.href}
-                                        onClick={closeMenu}
-                                        className="group relative flex items-center text-5xl sm:text-6xl md:text-[80px] font-bold tracking-tighter text-zinc-500 hover:text-white transition-colors duration-500"
+                                        onClick={(e) => handleScrollTo(e, link.href)}
+                                        className="group relative flex items-center text-5xl sm:text-6xl md:text-[80px] font-bold tracking-tighter text-zinc-500 hover:text-white transition-colors duration-500 cursor-pointer"
                                     >
                                         {/* Number prefix for structure */}
                                         <span className="absolute -left-12 md:-left-16 top-2 md:top-4 text-sm md:text-lg font-mono font-normal text-zinc-700 opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-x-4 group-hover:translate-x-0 hidden sm:block">
@@ -147,7 +160,7 @@ export function Header() {
                                         <span className="transform-gpu group-hover:translate-x-4 transition-transform duration-500 ease-[0.21,0.47,0.32,0.98]">
                                             {link.name}
                                         </span>
-                                    </Link>
+                                    </a>
                                 </motion.div>
                             ))}
                         </nav>

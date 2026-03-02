@@ -49,29 +49,37 @@ export function Contact() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="w-full max-w-md space-y-4"
-                        onSubmit={(e) => e.preventDefault()}
+                        action="https://formsubmit.co/bstuashurov@gmail.com"
+                        method="POST"
                     >
+                        {/* Hidden fields for FormSubmit configuration */}
+                        <input type="hidden" name="_subject" value="New Project Inquiry - Portfolio" />
+                        <input type="hidden" name="_template" value="box" />
+
                         <div className="flex flex-col sm:flex-row gap-4">
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Name"
-                                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all"
+                                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all focus:bg-white/10"
                                 required
                             />
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Email"
-                                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all"
+                                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all focus:bg-white/10"
                                 required
                             />
                         </div>
                         <textarea
+                            name="message"
                             placeholder="Tell me about your project"
                             rows={4}
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all resize-none"
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all resize-none focus:bg-white/10"
                             required
                         ></textarea>
-                        <Button size="lg" className="w-full">
+                        <Button type="submit" size="lg" className="w-full hover:scale-[1.02] transition-transform">
                             Start a Conversation
                         </Button>
                     </motion.form>

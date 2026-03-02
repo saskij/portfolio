@@ -15,7 +15,7 @@ export function ProjectGrid() {
             technology: "Next.js and Framer Motion for subtle transitions that keep the focus on the content.",
             result: "Improved brand credibility and a simplified driver application process.",
             techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-            image: "/images/projects/coolmountain.png",
+            image: "/images/projects/coolmountain.webp",
             link: "https://saskij.github.io/Coolmountain/"
         },
         {
@@ -26,7 +26,7 @@ export function ProjectGrid() {
             technology: "Next.js and Tailwind CSS prioritized fast load times and a consistent mobile-first experience.",
             result: "A reliable digital introduction for new logistics partners.",
             techStack: ["Next.js", "React", "Framer Motion", "Vercel"],
-            image: "/images/projects/newpath.png",
+            image: "/images/projects/newpath.webp",
             link: "https://www.newpathlogisticllc.com"
         },
         {
@@ -37,7 +37,7 @@ export function ProjectGrid() {
             technology: "Built with Next.js, focusing on custom CSS animations for a polished user journey.",
             result: "Successfully guided customers from viewing work to requesting specialized quotes.",
             techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "Stripe API"],
-            image: "/images/projects/honor.png",
+            image: "/images/projects/honor.webp",
             link: "https://www.honorautodetailing.com"
         },
         {
@@ -48,7 +48,7 @@ export function ProjectGrid() {
             technology: "React and Lucide icons provided a functional, easy-to-navigate interface for mobile users.",
             result: "Reduced customer confusion and provided a clear source of truth for service levels.",
             techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-            image: "/images/projects/rsm.png",
+            image: "/images/projects/rsm.webp",
             link: "https://rsmidaho.com"
         },
     ];
