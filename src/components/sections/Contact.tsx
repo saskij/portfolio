@@ -51,6 +51,7 @@ export function Contact() {
                         className="w-full max-w-md space-y-4"
                         action="https://formsubmit.co/bstuashurov@gmail.com"
                         method="POST"
+                        target="_blank"
                     >
                         {/* Hidden fields for FormSubmit configuration */}
                         <input type="hidden" name="_subject" value="New Project Inquiry - Portfolio" />
