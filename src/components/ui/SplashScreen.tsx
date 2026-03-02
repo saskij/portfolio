@@ -36,10 +36,11 @@ export function SplashScreen() {
         <AnimatePresence>
             {!isSplashComplete && (
                 <motion.div
+                    key="splash-screen"
                     initial={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    exit={{ opacity: 0, transitionEnd: { display: "none" } }}
                     transition={{ duration: 0.3 }}
-                    className="fixed inset-0 z-[100] bg-[#050505] flex items-center justify-center overflow-hidden"
+                    className="fixed inset-0 z-[100] bg-[#050505] flex items-center justify-center overflow-hidden pointer-events-auto"
                 >
                     {/* Architectural Blueprint HUD Animation */}
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
