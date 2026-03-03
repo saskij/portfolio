@@ -119,7 +119,7 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <a href="#work" onClick={(e) => handleScrollTo(e, '#work')} className="w-full sm:w-auto">
+                    <a href="#portfolio" onClick={(e) => handleScrollTo(e, '#portfolio')} className="w-full sm:w-auto">
                         <Button size="lg" className="w-full hover:scale-[1.02] transition-transform">
                             View My Work
                         </Button>
