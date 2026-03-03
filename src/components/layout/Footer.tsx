@@ -10,7 +10,7 @@ export function Footer() {
         <footer className="border-t border-white/10 bg-black py-12 md:py-16">
             <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col items-center md:items-start gap-2">
-                    <Link href="#hero" className="z-[60] relative flex items-center group h-[120px] w-auto aspect-[422/396]">
+                    <Link href="#hero" className="z-[60] relative flex items-center group h-[180px] w-auto aspect-[422/396]">
                         <GlobalLogo className="w-full h-full" />
                     </Link>
                     <p className="text-sm text-zinc-500 text-center md:text-left max-w-xs">
