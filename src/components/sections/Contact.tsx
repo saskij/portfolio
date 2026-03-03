@@ -5,21 +5,27 @@ import { Button } from "@/components/ui/Button";
 
 export function Contact() {
     return (
-        <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
+        <section id="contact" className="py-24 md:py-32 relative overflow-hidden bg-black">
+            {/* Top Technical Divider */}
+            <div className="absolute top-0 left-0 w-full flex justify-center z-20">
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent" />
+                <div className="absolute top-0 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-zinc-500/40 to-transparent blur-[1px]" />
+            </div>
+
             {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none z-0" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zinc-600/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
             <div className="container px-6 md:px-12 mx-auto relative z-10">
                 <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="mb-8 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md"
+                        className="mb-8 p-3 bg-zinc-950/50 border border-zinc-800 flex items-center justify-center gap-3 backdrop-blur-md"
                     >
-                        <span className="block w-3 h-3 rounded-full bg-green-500 animate-pulse mx-auto mb-2" />
-                        <span className="text-xs uppercase tracking-widest text-zinc-400 font-medium">Accepting new projects</span>
+                        <span className="block w-1.5 h-1.5 bg-zinc-500" />
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-semibold">Availability: Open</span>
                     </motion.div>
 
                     <motion.h2

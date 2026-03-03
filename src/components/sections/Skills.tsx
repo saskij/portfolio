@@ -24,29 +24,41 @@ export function Skills() {
     const skillCategories = [
         {
             title: "Frontend Engineering",
-            icon: <Terminal className="w-6 h-6 text-blue-400" />,
+            icon: <Terminal className="w-6 h-6 text-zinc-400" />,
             skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux", "Zustand"]
         },
         {
             title: "UI/UX Design",
-            icon: <PenTool className="w-6 h-6 text-purple-400" />,
+            icon: <PenTool className="w-6 h-6 text-zinc-400" />,
             skills: ["Figma", "Design Systems", "Prototyping", "Wireframing", "Interaction Design", "Accessibility"]
         },
         {
             title: "Backend & Systems",
-            icon: <Database className="w-6 h-6 text-green-400" />,
+            icon: <Database className="w-6 h-6 text-zinc-400" />,
             skills: ["Node.js", "Express", "PostgreSQL", "Supabase", "Prisma", "REST APIs", "GraphQL"]
         },
         {
             title: "Architecture & Tools",
-            icon: <Layers className="w-6 h-6 text-orange-400" />,
+            icon: <Layers className="w-6 h-6 text-zinc-400" />,
             skills: ["Git", "Docker", "CI/CD", "Jest", "Cypress", "Performance Optimization", "SEO"]
         }
     ];
 
     return (
-        <section className="py-24 md:py-32 bg-black/50 border-y border-white/5 relative">
-            <div className="container mx-auto px-6 md:px-12">
+        <section className="py-24 md:py-32 bg-black/50 relative">
+            {/* Top Technical Divider */}
+            <div className="absolute top-0 left-0 w-full flex justify-center">
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent" />
+                <div className="absolute top-0 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-zinc-500/40 to-transparent blur-[1px]" />
+            </div>
+
+            {/* Bottom Technical Divider */}
+            <div className="absolute bottom-0 left-0 w-full flex justify-center">
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent" />
+                <div className="absolute top-0 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-zinc-500/40 to-transparent blur-[1px]" />
+            </div>
+
+            <div className="container mx-auto px-6 md:px-12 relative z-10">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

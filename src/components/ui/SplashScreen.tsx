@@ -16,7 +16,7 @@ export function SplashScreen() {
         // Phase 2: Finalize splash and fade out
         const t2 = setTimeout(() => {
             setSplashComplete(true);
-        }, 2200); // Wait 2s total before completing
+        }, 1200); // Wait 1s total before completing
 
         return () => {
             clearTimeout(t1);
@@ -41,7 +41,7 @@ export function SplashScreen() {
                                 opacity: phase === "visible" ? 1 : 0,
                                 scale: phase === "visible" ? 1 : 0.95
                             }}
-                            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }} // Elegant, slow ease-out scale/fade
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} // Elegant, faster ease-out scale/fade
                             className="w-[50vh] aspect-[422/396]"
                         >
                             <GlobalLogo className="w-full h-full" priority />

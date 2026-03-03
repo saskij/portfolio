@@ -54,8 +54,19 @@ export function ProjectGrid() {
     ];
 
     return (
-        <section id="portfolio" className="py-32 bg-black border-t border-white/5 relative">
-            <div className="container px-6 md:px-12 mx-auto max-w-7xl">
+        <section id="portfolio" className="py-32 bg-black relative overflow-hidden">
+            {/* Top Technical Divider */}
+            <div className="absolute top-0 left-0 w-full flex justify-center z-20">
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent" />
+                <div className="absolute top-0 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-zinc-500/40 to-transparent blur-[1px]" />
+            </div>
+
+            {/* Subtle Architectural Glow */}
+            <div className="absolute inset-0 z-0 pointer-events-none flex items-start justify-start">
+                <div className="w-[800px] h-[800px] bg-white/[0.015] rounded-full blur-[120px] -translate-y-1/4 -translate-x-1/4" />
+            </div>
+
+            <div className="container px-6 md:px-12 mx-auto max-w-7xl relative z-10">
                 <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
                     <div className="max-w-3xl">
                         <motion.h2

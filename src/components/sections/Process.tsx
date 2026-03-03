@@ -32,8 +32,13 @@ export function Process() {
     ];
 
     return (
-        <section id="process" className="py-24 md:py-32">
-            <div className="container px-6 md:px-12 mx-auto">
+        <section id="process" className="py-24 md:py-32 bg-zinc-950/80 relative overflow-hidden">
+            {/* Subtle Architectural Glow */}
+            <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+                <div className="w-[1000px] h-[500px] bg-white/[0.015] rounded-full blur-[100px] -translate-y-1/4" />
+            </div>
+
+            <div className="container px-6 md:px-12 mx-auto relative z-10">
                 <div className="text-center max-w-2xl mx-auto mb-20">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

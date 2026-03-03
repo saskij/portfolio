@@ -125,7 +125,7 @@ export function Header() {
             {/* Logo */}
             <Link
                 href="/"
-                className="z-[60] relative flex items-center group h-[180px] w-auto aspect-[422/396]"
+                className="z-[60] relative flex items-center group h-[180px] w-auto aspect-[422/396] translate-y-3"
                 onClick={closeMenu}
             >
                 <GlobalLogo className="w-full h-full" />

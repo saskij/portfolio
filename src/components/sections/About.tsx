@@ -6,8 +6,20 @@ import { getAssetPath } from "@/lib/utils";
 
 export function About() {
     return (
-        <section id="about" className="py-24 md:py-32 relative">
-            <div className="container px-6 md:px-12 mx-auto">
+        <section id="about" className="py-24 md:py-32 relative bg-zinc-950 overflow-hidden">
+            {/* Technical Divider */}
+            <div className="absolute top-0 left-0 w-full flex justify-center">
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent" />
+                {/* Core highlight for precision */}
+                <div className="absolute top-0 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-zinc-500/40 to-transparent blur-[1px]" />
+            </div>
+
+            {/* Subtle Architectural Glow */}
+            <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-end">
+                <div className="w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[120px] translate-x-1/3" />
+            </div>
+
+            <div className="container px-6 md:px-12 mx-auto relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
 
                     <motion.div

@@ -22,16 +22,15 @@ export function Hero() {
                 {/* Subtle Noise Texture */}
                 <div className="absolute inset-0 bg-noise opacity-[0.035] mix-blend-screen" />
 
-                {/* Layer 1: Base Ambient Glow (Broad, Deep Blue/Purple) */}
+                {/* Layer 1: Base Ambient Glow (Very diffuse, neutral/incandescent) */}
                 <motion.div
                     animate={{
-                        opacity: [0.45, 0.71, 0.45],
-                        scale: [0.95, 1.05, 0.95],
+                        opacity: [0.05, 0.10, 0.05],
+                        scale: [0.98, 1.02, 0.98],
                         backgroundImage: [
-                            "radial-gradient(ellipse at center, rgba(49,46,129,0.39) 0%, rgba(88,28,135,0.19) 40%, transparent 80%)",
-                            "radial-gradient(ellipse at center, rgba(30,58,138,0.39) 0%, rgba(76,29,149,0.19) 40%, transparent 80%)",
-                            "radial-gradient(ellipse at center, rgba(88,28,135,0.39) 0%, rgba(49,46,129,0.19) 40%, transparent 80%)",
-                            "radial-gradient(ellipse at center, rgba(49,46,129,0.39) 0%, rgba(88,28,135,0.19) 40%, transparent 80%)"
+                            "radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(200,200,210,0.03) 40%, transparent 80%)",
+                            "radial-gradient(ellipse at center, rgba(240,240,250,0.08) 0%, rgba(210,210,225,0.03) 40%, transparent 80%)",
+                            "radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(200,200,210,0.03) 40%, transparent 80%)"
                         ]
                     }}
                     transition={{
@@ -42,16 +41,15 @@ export function Hero() {
                     className="absolute w-[120vw] h-[100vh] max-w-[1400px] max-h-[900px] rounded-full blur-[140px]"
                 />
 
-                {/* Layer 2: Core Focused Glow behind Headline (Slightly warmer, intense) */}
+                {/* Layer 2: Core Focused Glow behind Headline (Subtle architectural warmth) */}
                 <motion.div
                     animate={{
-                        opacity: [0.52, 0.91, 0.52],
+                        opacity: [0.08, 0.14, 0.08],
                         scale: [0.98, 1.02, 0.98],
                         backgroundImage: [
-                            "radial-gradient(ellipse at center, rgba(159,18,57,0.28) 0%, rgba(109,40,217,0.23) 40%, transparent 70%)",
-                            "radial-gradient(ellipse at center, rgba(109,40,217,0.28) 0%, rgba(139,92,246,0.23) 40%, transparent 70%)",
-                            "radial-gradient(ellipse at center, rgba(190,18,60,0.28) 0%, rgba(159,18,57,0.23) 40%, transparent 70%)",
-                            "radial-gradient(ellipse at center, rgba(159,18,57,0.28) 0%, rgba(109,40,217,0.23) 40%, transparent 70%)"
+                            "radial-gradient(ellipse at center, rgba(250,245,235,0.06) 0%, rgba(230,225,235,0.02) 40%, transparent 70%)",
+                            "radial-gradient(ellipse at center, rgba(255,250,240,0.06) 0%, rgba(240,235,245,0.02) 40%, transparent 70%)",
+                            "radial-gradient(ellipse at center, rgba(250,245,235,0.06) 0%, rgba(230,225,235,0.02) 40%, transparent 70%)"
                         ]
                     }}
                     transition={{
@@ -70,29 +68,15 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <motion.span
-                        whileHover={{
-                            backgroundColor: [
-                                "rgba(255,255,255,0.05)",
-                                "rgba(139,92,246,0.2)",
-                                "rgba(6,182,212,0.2)",
-                                "rgba(236,72,153,0.2)",
-                                "rgba(255,255,255,0.05)"
-                            ],
-                            borderColor: [
-                                "rgba(255,255,255,0.1)",
-                                "rgba(139,92,246,0.5)",
-                                "rgba(6,182,212,0.5)",
-                                "rgba(236,72,153,0.5)",
-                                "rgba(255,255,255,0.1)"
-                            ],
-                            color: ["#d4d4d8", "#ffffff", "#ffffff", "#ffffff", "#d4d4d8"],
-                            transition: { duration: 4, repeat: Infinity, ease: "linear" }
-                        }}
-                        className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-zinc-300 mb-6 cursor-pointer"
+                    <motion.div
+                        whileHover={{ backgroundColor: "rgba(255,255,255,0.05)" }}
+                        className="inline-flex items-center gap-3 py-1.5 px-3 border border-zinc-800 bg-zinc-950/50 mb-6 cursor-pointer"
                     >
-                        Available for new projects
-                    </motion.span>
+                        <span className="block w-1.5 h-1.5 bg-zinc-500" />
+                        <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-zinc-400">
+                            Status: Available
+                        </span>
+                    </motion.div>
                 </motion.div>
 
                 <motion.h1
