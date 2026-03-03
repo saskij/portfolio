@@ -105,9 +105,10 @@ export function SplashScreen() {
                                                 transition={{ duration: 0.5, delay: 0.7 }}
                                             />
 
-                                            {/* Inner Guides for "A" shape (approximate) */}
+                                            {/* Inner Guides for "A-S" monogram shape */}
                                             <motion.path
-                                                d="M 211 50 L 50 350 M 211 50 L 372 350 M 130 200 L 292 200"
+                                                // Main upward and downward bounding angles
+                                                d="M 211 50 L 50 350 M 211 50 L 372 350 M 120 180 L 300 180 M 120 280 L 300 280 M 211 50 L 211 350"
                                                 initial={{ pathLength: 0, opacity: 0 }}
                                                 animate={{ pathLength: 1, opacity: 0.1 }}
                                                 transition={{ duration: 0.8, delay: 0.3, ease: "easeInOut" }}
