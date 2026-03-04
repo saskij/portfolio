@@ -8,17 +8,17 @@ export function Services() {
         {
             icon: <Code2 className="w-8 h-8 text-accent-blue" />,
             title: "Custom Web Applications",
-            description: "Сложные, быстрые и безопасные порталы, заточенные под ваши бизнес-процессы.",
+            description: "Complex, high-performance, and secure portals tailored specifically to your business processes.",
         },
         {
             icon: <LayoutTemplate className="w-8 h-8 text-accent-amber" />,
             title: "High-Conversion Landing Pages",
-            description: "Премиальные сайты, как это портфолио, с фокусом на вау-эффект и продажи.",
+            description: "Premium landing pages, like this portfolio, designed for high conversion and architectural impact.",
         },
         {
             icon: <Zap className="w-8 h-8 text-accent-violet-dark" />,
             title: "Performance Optimization",
-            description: "Ускорение сайтов и улучшение SEO для максимального охвата аудитории.",
+            description: "Optimization of site speed and SEO to maximize reach and improve search engine rankings.",
         },
     ];
 
