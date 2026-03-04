@@ -67,14 +67,19 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <div
-                        className="inline-flex items-center gap-3 py-1.5 px-3 border border-zinc-800 bg-zinc-950/50 mb-6"
+                    <a
+                        href="#contact"
+                        onClick={(e) => handleScrollTo(e as unknown as React.MouseEvent<HTMLAnchorElement>, '#contact')}
+                        className="inline-flex items-center gap-3 py-1.5 px-4 border border-zinc-800 bg-zinc-950/50 mb-6 rounded-full hover:bg-zinc-900/80 hover:border-accent-amber/30 transition-all duration-300 group cursor-pointer"
                     >
-                        <span className="block w-1.5 h-1.5 bg-zinc-500" />
-                        <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-zinc-400">
-                            Status: Available
+                        <span className="relative flex w-1.5 h-1.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-amber opacity-60"></span>
+                            <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-accent-amber shadow-[0_0_8px_rgba(245,166,35,0.8)]"></span>
                         </span>
-                    </div>
+                        <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                            Limited Capacity • Inquire for Schedule
+                        </span>
+                    </a>
                 </motion.div>
 
                 <motion.h1
