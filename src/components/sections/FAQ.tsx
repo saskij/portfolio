@@ -6,20 +6,20 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "Сколько времени занимает создание сайта?",
-        answer: "Сроки зависят от сложности проекта. Одностраничный лендинг или портфолио обычно занимает 1-2 недели. Сложные веб-приложения или корпоративные порталы могут потребовать от 4 до 8 недель разработки.",
+        question: "How long does it take to build a website?",
+        answer: "Timelines depend on the complexity of the project. A single-page landing or portfolio typically takes 1-2 weeks. Complex web applications or corporate portals may require 4 to 8 weeks of development.",
     },
     {
-        question: "Каков минимальный бюджет для старта?",
-        answer: "Минимальный бюджет на разработку премиального лендинга начинается от $1000. В эту стоимость входит анализ, дизайн, верстка и интеграция базовых систем аналитики. Итоговая стоимость всегда рассчитывается индивидуально после первой консультации.",
+        question: "What is the minimum budget to get started?",
+        answer: "The minimum budget for developing a premium landing page starts at $1,000. This includes analysis, design, development, and basic analytics integration. The final cost is always calculated individually after the initial consultation.",
     },
     {
-        question: "Вы занимаетесь только кодом или дизайном тоже?",
-        answer: "Я фулл-стек разработчик с сильным уклоном в UI/UX дизайн (как вы можете видеть по этому портфолио). Я проектирую интерфейс в Figma, а затем воплощаю его в код, обеспечивая полное соответствие конечного результата задумке.",
+        question: "Do you only write code, or do you design as well?",
+        answer: "I am a full-stack developer with a strong focus on UI/UX design (as you can see from this portfolio). I design the interface in Figma and then bring it to life in code, ensuring the final result perfectly matches the vision.",
     },
     {
-        question: "Обеспечиваете ли вы поддержку после запуска?",
-        answer: "Да, на все проекты предоставляется гарантийный период 1 месяц для исправления любых багов. Также мы можем договориться о ежемесячной технической поддержке и развитии вашего проекта.",
+        question: "Do you provide support after launch?",
+        answer: "Yes, all projects come with a 1-month warranty period for fixing any bugs. We can also arrange for ongoing monthly technical support and further development of your project.",
     },
 ];
 
@@ -49,7 +49,7 @@ export function FAQ() {
                         transition={{ delay: 0.1 }}
                         className="text-lg text-zinc-400 max-w-2xl mx-auto"
                     >
-                        Прозрачность — основа моего подхода. Вот ответы на самые популярные вопросы о процессе работы.
+                        Transparency is the foundation of my approach. Here are answers to the most common questions about the working process.
                     </motion.p>
                 </div>
 
