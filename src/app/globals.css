@@ -21,6 +21,12 @@
   --input: #27272a;
   --ring: #d4d4d8;
   --radius: 0.5rem;
+
+  /* Premium Content Accents */
+  --accent-amber: #f5a623;
+  --accent-blue: #3a6dff;
+  --accent-violet-dark: #1a1f3a;
+  --accent-violet-light: #252b5c;
 }
 
 @theme inline {
@@ -43,6 +49,11 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-violet-dark: var(--accent-violet-dark);
+  --color-accent-violet-light: var(--accent-violet-light);
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);

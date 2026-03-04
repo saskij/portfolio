@@ -44,7 +44,7 @@ export function SplashScreen() {
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} // Elegant, faster ease-out scale/fade
                             className="w-[50vh] aspect-[422/396]"
                         >
-                            <GlobalLogo className="w-full h-full" priority />
+                            <GlobalLogo className="w-full h-full" />
                         </motion.div>
                     </div>
                 </motion.div>

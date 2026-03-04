@@ -22,10 +22,13 @@ export function Contact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="mb-8 p-3 bg-zinc-950/50 border border-zinc-800 flex items-center justify-center gap-3 backdrop-blur-md"
                     >
-                        <span className="block w-1.5 h-1.5 bg-zinc-500" />
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-semibold">Availability: Open</span>
+                        <div
+                            className="mb-8 p-3 bg-zinc-950/50 border border-zinc-800 flex items-center justify-center gap-3 backdrop-blur-md"
+                        >
+                            <span className="block w-1.5 h-1.5 bg-zinc-500" />
+                            <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-semibold">Availability: Open</span>
+                        </div>
                     </motion.div>
 
                     <motion.h2

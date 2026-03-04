@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
@@ -22,15 +21,15 @@ export function Hero() {
                 {/* Subtle Noise Texture */}
                 <div className="absolute inset-0 bg-noise opacity-[0.035] mix-blend-screen" />
 
-                {/* Layer 1: Base Ambient Glow (Very diffuse, neutral/incandescent) */}
+                {/* Layer 1: Base Ambient Glow (Deep Violet-Blue) */}
                 <motion.div
                     animate={{
-                        opacity: [0.05, 0.10, 0.05],
+                        opacity: [0.15, 0.25, 0.15],
                         scale: [0.98, 1.02, 0.98],
                         backgroundImage: [
-                            "radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(200,200,210,0.03) 40%, transparent 80%)",
-                            "radial-gradient(ellipse at center, rgba(240,240,250,0.08) 0%, rgba(210,210,225,0.03) 40%, transparent 80%)",
-                            "radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(200,200,210,0.03) 40%, transparent 80%)"
+                            "radial-gradient(ellipse at center, rgba(26,31,58,0.8) 0%, rgba(26,31,58,0.2) 40%, transparent 80%)",
+                            "radial-gradient(ellipse at center, rgba(37,43,92,0.8) 0%, rgba(37,43,92,0.2) 40%, transparent 80%)",
+                            "radial-gradient(ellipse at center, rgba(26,31,58,0.8) 0%, rgba(26,31,58,0.2) 40%, transparent 80%)"
                         ]
                     }}
                     transition={{
@@ -41,15 +40,15 @@ export function Hero() {
                     className="absolute w-[120vw] h-[100vh] max-w-[1400px] max-h-[900px] rounded-full blur-[140px]"
                 />
 
-                {/* Layer 2: Core Focused Glow behind Headline (Subtle architectural warmth) */}
+                {/* Layer 2: Core Focused Glow behind Headline (Violet-blue depth) */}
                 <motion.div
                     animate={{
-                        opacity: [0.08, 0.14, 0.08],
+                        opacity: [0.2, 0.3, 0.2],
                         scale: [0.98, 1.02, 0.98],
                         backgroundImage: [
-                            "radial-gradient(ellipse at center, rgba(250,245,235,0.06) 0%, rgba(230,225,235,0.02) 40%, transparent 70%)",
-                            "radial-gradient(ellipse at center, rgba(255,250,240,0.06) 0%, rgba(240,235,245,0.02) 40%, transparent 70%)",
-                            "radial-gradient(ellipse at center, rgba(250,245,235,0.06) 0%, rgba(230,225,235,0.02) 40%, transparent 70%)"
+                            "radial-gradient(ellipse at center, rgba(37,43,92,0.8) 0%, rgba(26,31,58,0.3) 40%, transparent 70%)",
+                            "radial-gradient(ellipse at center, rgba(45,50,105,0.8) 0%, rgba(37,43,92,0.3) 40%, transparent 70%)",
+                            "radial-gradient(ellipse at center, rgba(37,43,92,0.8) 0%, rgba(26,31,58,0.3) 40%, transparent 70%)"
                         ]
                     }}
                     transition={{
@@ -68,15 +67,14 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <motion.div
-                        whileHover={{ backgroundColor: "rgba(255,255,255,0.05)" }}
-                        className="inline-flex items-center gap-3 py-1.5 px-3 border border-zinc-800 bg-zinc-950/50 mb-6 cursor-pointer"
+                    <div
+                        className="inline-flex items-center gap-3 py-1.5 px-3 border border-zinc-800 bg-zinc-950/50 mb-6"
                     >
                         <span className="block w-1.5 h-1.5 bg-zinc-500" />
                         <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-zinc-400">
                             Status: Available
                         </span>
-                    </motion.div>
+                    </div>
                 </motion.div>
 
                 <motion.h1
@@ -104,7 +102,7 @@ export function Hero() {
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
                     <a href="#portfolio" onClick={(e) => handleScrollTo(e, '#portfolio')} className="w-full sm:w-auto">
-                        <Button size="lg" className="w-full hover:scale-[1.02] transition-transform">
+                        <Button size="lg" className="w-full bg-accent-amber text-black hover:bg-accent-amber/90 hover:shadow-[0_0_20px_rgba(245,166,35,0.25)] border-none hover:scale-[1.02] transition-all duration-300">
                             View My Work
                         </Button>
                     </a>

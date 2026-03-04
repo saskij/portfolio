@@ -51,17 +51,10 @@ const itemVariants = {
    Component
 ───────────────────────────────────────── */
 export function Header() {
-    const [isScrolled, setIsScrolled] = React.useState(false);
     const [menuOpen, setMenuOpen] = React.useState(false);
     const { isSplashComplete } = useLogo();
     const navRef = React.useRef<HTMLElement>(null);
     const triggerRef = React.useRef<HTMLButtonElement>(null);
-
-    React.useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 20);
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     // Close on Escape key
     React.useEffect(() => {
@@ -144,7 +137,7 @@ export function Header() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
                     className="hidden sm:inline-block rounded-full bg-white px-6 py-2.5 text-sm font-semibold tracking-wide text-black hover:bg-zinc-200 transition-colors cursor-pointer mr-2"
-                    onClick={(e) => handleScrollTo(e as any, "#contact")}
+                    onClick={(e) => handleScrollTo(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
                 >
                     Let&apos;s Talk
                 </motion.a>

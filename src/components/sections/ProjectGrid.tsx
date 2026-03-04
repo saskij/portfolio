@@ -114,6 +114,8 @@ export function ProjectGrid() {
                                     sizes="(max-width: 768px) 100vw, 60vw"
                                     className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out transform-gpu will-change-transform z-10"
                                 />
+                                {/* Subtle electric blue overlay on hover */}
+                                <div className="absolute inset-0 bg-accent-blue/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none mix-blend-screen" />
                             </motion.a>
 
                             {/* Content Side - 40% width on Desktop */}
@@ -146,8 +148,13 @@ export function ProjectGrid() {
                                         href={item.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-3 text-white font-semibold group/link border-b border-white/20 pb-2 hover:border-white transition-all duration-300"
+                                        className="inline-flex items-center gap-3 text-white font-semibold group/link pb-2 relative transition-all duration-300 hover:text-accent-amber"
                                     >
+                                        {/* Base neutral underline */}
+                                        <div className="absolute left-0 bottom-0 w-full h-[1px] bg-white/20" />
+                                        {/* Animated amber underline */}
+                                        <div className="absolute left-0 bottom-0 w-full h-[1px] bg-accent-amber scale-x-0 group-hover/link:scale-x-100 transition-transform origin-left duration-300 shadow-[0_0_8px_rgba(245,166,35,0.6)]" />
+
                                         <span className="text-lg">Explore Case Study</span>
                                         <ExternalLink className="w-5 h-5 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" />
                                     </a>

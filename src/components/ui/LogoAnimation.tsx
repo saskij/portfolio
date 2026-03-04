@@ -7,7 +7,6 @@ export function LogoAnimation({ isSplash = false }: { isSplash?: boolean }) {
     // Elegant, smooth timing configuration
     const bezier1: [number, number, number, number] = [0.16, 1, 0.3, 1];
     const bezier2: [number, number, number, number] = [0.25, 1, 0.5, 1];
-    const transitionGrid = { duration: 1, ease: bezier1 };
     const transitionDraw = { duration: 1.2, ease: bezier2, delay: isSplash ? 0.1 : 0 };
     const transitionFade = { duration: 0.8, ease: "easeOut" as const, delay: isSplash ? 1.4 : 0 };
 

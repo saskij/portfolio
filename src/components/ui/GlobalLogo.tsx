@@ -2,16 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import { getAssetPath } from "@/lib/utils";
 
 interface GlobalLogoProps {
     className?: string;
-    priority?: boolean;
 }
 
-export function GlobalLogo({ className = "", priority = false }: GlobalLogoProps) {
+export function GlobalLogo({ className = "" }: GlobalLogoProps) {
     return (
         <motion.div
             layoutId="main-logo"
