@@ -16,8 +16,8 @@ const capsuleVariants = {
         opacity: 0,
         transition: {
             when: "afterChildren" as const,
-            duration: 0.42,
-            ease: [0.77, 0, 0.175, 1] as [number, number, number, number],
+            duration: 0.2,
+            ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
         },
     },
     open: {
@@ -25,10 +25,10 @@ const capsuleVariants = {
         opacity: 1,
         transition: {
             when: "beforeChildren" as const,
-            duration: 0.55,
-            ease: [0.77, 0, 0.175, 1] as [number, number, number, number],
-            staggerChildren: 0.07,
-            delayChildren: 0.18,
+            duration: 0.3,
+            ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
+            staggerChildren: 0.04,
+            delayChildren: 0.05,
         },
     },
 };
@@ -36,13 +36,13 @@ const capsuleVariants = {
 const itemVariants = {
     closed: {
         opacity: 0,
-        x: 16,
-        transition: { duration: 0.2, ease: "easeIn" as const },
+        x: 8,
+        transition: { duration: 0.15, ease: "easeIn" as const },
     },
     open: {
         opacity: 1,
         x: 0,
-        transition: { duration: 0.42, ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number] },
+        transition: { duration: 0.25, ease: [0.4, 0, 0.2, 1] as [number, number, number, number] },
     },
 };
 
@@ -197,7 +197,7 @@ export function Header() {
                                     y: menuOpen ? 6 : 0,
                                     width: "24px",
                                 }}
-                                transition={{ duration: 0.42, ease: [0.21, 0.47, 0.32, 0.98] }}
+                                transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                                 className="h-[2px] bg-white rounded-full origin-center group-hover:bg-zinc-300 transition-colors"
                                 style={{ width: "24px" }}
                             />
@@ -208,7 +208,7 @@ export function Header() {
                                     y: menuOpen ? -8 : 0,
                                     width: menuOpen ? "24px" : "16px",
                                 }}
-                                transition={{ duration: 0.42, ease: [0.21, 0.47, 0.32, 0.98] }}
+                                transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                                 className="h-[2px] bg-white rounded-full origin-center group-hover:w-[24px] group-hover:bg-zinc-300 transition-colors"
                             />
                         </div>
