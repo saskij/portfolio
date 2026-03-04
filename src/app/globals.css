@@ -29,7 +29,7 @@
   --accent-violet-light: #252b5c;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -50,10 +50,10 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-accent-amber: var(--accent-amber);
-  --color-accent-blue: var(--accent-blue);
-  --color-accent-violet-dark: var(--accent-violet-dark);
-  --color-accent-violet-light: var(--accent-violet-light);
+  --color-accent-amber: #f5a623;
+  --color-accent-blue: #3a6dff;
+  --color-accent-violet-dark: #1a1f3a;
+  --color-accent-violet-light: #252b5c;
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
