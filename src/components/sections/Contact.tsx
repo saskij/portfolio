@@ -17,20 +17,6 @@ export function Contact() {
 
             <div className="container px-6 md:px-12 mx-auto relative z-10">
                 <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    >
-                        <div
-                            className="mb-8 p-3 bg-zinc-950/50 border border-zinc-800 flex items-center justify-center gap-3 backdrop-blur-md"
-                        >
-                            <span className="block w-1.5 h-1.5 bg-zinc-500" />
-                            <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-semibold">Availability: Open</span>
-                        </div>
-                    </motion.div>
-
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
