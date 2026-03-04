@@ -54,14 +54,31 @@ export function Services() {
                     </motion.h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        show: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.15
+                            }
+                        }
+                    }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+                >
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{ duration: 0.6, delay: 0.1 * index, ease: [0.25, 0.46, 0.45, 0.94] }}
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                show: {
+                                    opacity: 1, y: 0,
+                                    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
+                                }
+                            }}
                             className="bg-black border border-white/5 rounded-3xl p-8 hover:border-white/10 hover:bg-zinc-900/50 transition-all duration-300 group relative overflow-hidden"
                         >
                             {/* Hover Gradient Overlay */}
@@ -76,7 +93,7 @@ export function Services() {
                             </p>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
