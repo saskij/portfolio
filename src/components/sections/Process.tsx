@@ -62,14 +62,14 @@ export function Process() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                    {/* Connecting Line (Desktop) - Muted Electric Blue */}
-                    <div className="hidden lg:block absolute top-[48px] left-[12%] right-[12%] h-[1px] bg-gradient-to-r from-transparent via-accent-blue/40 to-transparent" />
+                    {/* Connecting Line (Desktop) - Neutral Zinc */}
+                    <div className="hidden lg:block absolute top-[48px] left-[12%] right-[12%] h-[1px] bg-gradient-to-r from-transparent via-zinc-700/50 to-transparent" />
 
-                    {/* Glowing dividers between stages on the line */}
+                    {/* Neutral dividers between stages on the line */}
                     <div className="hidden lg:flex absolute top-[48px] left-[25%] right-[25%] justify-between pointer-events-none">
-                        <div className="w-1.5 h-[1px] rounded-full bg-accent-blue shadow-[0_0_8px_rgba(58,109,255,0.8)]" />
-                        <div className="w-1.5 h-[1px] rounded-full bg-accent-blue shadow-[0_0_8px_rgba(58,109,255,0.8)]" />
-                        <div className="w-1.5 h-[1px] rounded-full bg-accent-blue shadow-[0_0_8px_rgba(58,109,255,0.8)]" />
+                        <div className="w-1.5 h-[1px] rounded-full bg-zinc-600" />
+                        <div className="w-1.5 h-[1px] rounded-full bg-zinc-600" />
+                        <div className="w-1.5 h-[1px] rounded-full bg-zinc-600" />
                     </div>
 
                     {steps.map((step, index) => (
@@ -81,11 +81,11 @@ export function Process() {
                             transition={{ delay: index * 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                             className="relative flex flex-col items-center text-center group"
                         >
-                            {/* Icon Container with Hover Interaction: amber highlight + blue glow */}
-                            <div className="w-24 h-24 rounded-full bg-black border border-white/5 flex items-center justify-center z-10 mb-6 group-hover:border-accent-amber/50 group-hover:shadow-[0_0_30px_rgba(58,109,255,0.15)] transition-all duration-500 relative overflow-hidden">
+                            {/* Icon Container with Hover Interaction: amber highlight + amber glow */}
+                            <div className="w-24 h-24 rounded-full bg-black border border-white/5 flex items-center justify-center z-10 mb-6 group-hover:border-accent-amber/50 group-hover:shadow-[0_0_30px_rgba(245,166,35,0.15)] transition-all duration-500 relative overflow-hidden">
                                 {/* Amber circular node indicator */}
                                 <div className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-accent-amber/40 group-hover:bg-accent-amber group-hover:shadow-[0_0_10px_rgba(245,166,35,0.8)] transition-all duration-300" />
-                                <div className="absolute inset-0 bg-gradient-to-b from-accent-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="absolute inset-0 bg-gradient-to-b from-accent-amber/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="z-10 text-zinc-500 group-hover:text-accent-amber transition-colors duration-300">
                                     {step.icon}
                                 </div>
