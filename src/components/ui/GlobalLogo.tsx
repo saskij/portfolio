@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 
 import { getAssetPath } from "@/lib/utils";
 
@@ -11,12 +10,7 @@ interface GlobalLogoProps {
 
 export function GlobalLogo({ className = "" }: GlobalLogoProps) {
     return (
-        <motion.div
-            layoutId="main-logo"
-            transition={{
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1]
-            }}
+        <div
             className={`relative flex items-center justify-center ${className}`}
         >
             <div className="relative w-full h-full flex items-center justify-center">
@@ -47,11 +41,11 @@ export function GlobalLogo({ className = "" }: GlobalLogoProps) {
                 />
 
                 {/* 
-                  Optional: Add a subtle animated shimmer over the logo.
-                  This overlay is also masked so the shimmer only appears on the logo itself.
+                  Shimmer overlay — uses pure CSS animation for GPU compositing.
+                  Masked to only appear on the logo shape.
                 */}
-                <motion.div
-                    className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-50"
+                <div
+                    className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-50 logo-shimmer"
                     style={{
                         WebkitMaskImage: `url('${getAssetPath("/images/Logo.svg")}')`,
                         maskImage: `url('${getAssetPath("/images/Logo.svg")}')`,
@@ -64,16 +58,8 @@ export function GlobalLogo({ className = "" }: GlobalLogoProps) {
                         background: "linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.8) 25%, transparent 30%)",
                         backgroundSize: "200% 100%",
                     }}
-                    animate={{
-                        backgroundPosition: ["200% 0", "-200% 0"],
-                    }}
-                    transition={{
-                        repeat: Infinity,
-                        duration: 6,
-                        ease: "linear",
-                    }}
                 />
             </div>
-        </motion.div>
+        </div>
     );
 }

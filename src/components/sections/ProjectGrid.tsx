@@ -63,7 +63,7 @@ export function ProjectGrid() {
 
             {/* Subtle Architectural Glow */}
             <div className="absolute inset-0 z-0 pointer-events-none flex items-start justify-start">
-                <div className="w-[800px] h-[800px] bg-white/[0.015] rounded-full blur-[120px] -translate-y-1/4 -translate-x-1/4" />
+                <div className="w-[800px] h-[800px] bg-white/[0.015] rounded-full blur-[80px] -translate-y-1/4 -translate-x-1/4 glow-layer" />
             </div>
 
             <div className="container px-6 md:px-12 mx-auto max-w-7xl relative z-10">
@@ -72,7 +72,8 @@ export function ProjectGrid() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                             className="text-3xl md:text-4xl font-bold tracking-tight mb-4"
                         >
                             Selected <span className="text-zinc-500">Works.</span>
@@ -80,8 +81,8 @@ export function ProjectGrid() {
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ delay: 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                             className="text-base md:text-lg text-zinc-400"
                         >
                             A showcase of recent projects bridging complex engineering and premium design.
@@ -93,10 +94,10 @@ export function ProjectGrid() {
                     {gridItems.map((item, index) => (
                         <motion.div
                             key={item.id}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+                            viewport={{ once: true, amount: 0.15 }}
+                            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
                             className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-20 items-start`}
                         >
                             {/* Image Side - 60% width on Desktop */}

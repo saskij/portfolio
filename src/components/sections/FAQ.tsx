@@ -37,7 +37,8 @@ export function FAQ() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
                     >
                         Frequent <span className="text-zinc-500">Questions.</span>
@@ -45,8 +46,8 @@ export function FAQ() {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="text-lg text-zinc-400 max-w-2xl mx-auto"
                     >
                         Transparency is the foundation of my approach. Here are answers to the most common questions about the working process.
@@ -61,8 +62,8 @@ export function FAQ() {
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ delay: index * 0.08, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                                 className={`border border-white/5 rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-zinc-900/40 border-white/10' : 'bg-transparent hover:bg-white/[0.02]'}`}
                             >
                                 <button

@@ -144,3 +144,26 @@ body {
 .capsule-nav-link:hover::after {
   transform: scaleX(1);
 }
+
+/* ── Logo Shimmer (GPU-composited CSS animation) ─────────────── */
+@keyframes logo-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.logo-shimmer {
+  animation: logo-shimmer 6s linear infinite;
+  will-change: background-position;
+}
+
+/* ── GPU-accelerated glow layer ──────────────────────────────── */
+.glow-layer {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}

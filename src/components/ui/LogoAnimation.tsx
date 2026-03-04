@@ -12,7 +12,6 @@ export function LogoAnimation({ isSplash = false }: { isSplash?: boolean }) {
 
     return (
         <motion.div
-            layoutId="logo-container"
             transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
             className={`relative flex items-center ${isSplash ? "h-[60vh] w-[60vh]" : "w-12 h-12 -ml-2"}`}
         >

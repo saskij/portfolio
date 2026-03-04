@@ -44,7 +44,8 @@ export function Process() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
                     >
                         How it <span className="text-zinc-500">gets done.</span>
@@ -52,8 +53,8 @@ export function Process() {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="text-lg text-zinc-400"
                     >
                         A systematic, transparent process designed to turn complex problems into elegant solutions.
@@ -76,8 +77,8 @@ export function Process() {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ delay: index * 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                             className="relative flex flex-col items-center text-center group"
                         >
                             {/* Icon Container with Hover Interaction: amber highlight + blue glow */}

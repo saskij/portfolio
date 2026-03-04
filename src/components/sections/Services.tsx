@@ -32,8 +32,8 @@ export function Services() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <div className="inline-flex items-center gap-3 py-1.5 px-3 border border-zinc-800 bg-zinc-900/50 mb-6 rounded-full">
                             <span className="block w-1.5 h-1.5 bg-accent-blue rounded-full shadow-[0_0_8px_rgba(58,109,255,0.8)]" />
@@ -46,8 +46,8 @@ export function Services() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white"
                     >
                         What I <span className="text-zinc-500">Deliver.</span>
@@ -60,8 +60,8 @@ export function Services() {
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.1 * index }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, delay: 0.1 * index, ease: [0.25, 0.46, 0.45, 0.94] }}
                             className="bg-black border border-white/5 rounded-3xl p-8 hover:border-white/10 hover:bg-zinc-900/50 transition-all duration-300 group relative overflow-hidden"
                         >
                             {/* Hover Gradient Overlay */}

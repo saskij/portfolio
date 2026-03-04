@@ -21,35 +21,30 @@ export function Hero() {
                 {/* Subtle Noise Texture */}
                 <div className="absolute inset-0 bg-noise opacity-[0.035] mix-blend-screen" />
 
-                {/* Layer 1: Base Ambient Glow (Deep Violet-Blue) */}
+                {/* Layer 1: Base Ambient Glow (Deep Violet-Blue) — GPU-composited opacity+scale only */}
                 <motion.div
                     animate={{
                         opacity: [0.15, 0.25, 0.15],
                         scale: [0.98, 1.02, 0.98],
-                        backgroundImage: [
-                            "radial-gradient(ellipse at center, rgba(26,31,58,0.8) 0%, rgba(26,31,58,0.2) 40%, transparent 80%)",
-                            "radial-gradient(ellipse at center, rgba(37,43,92,0.8) 0%, rgba(37,43,92,0.2) 40%, transparent 80%)",
-                            "radial-gradient(ellipse at center, rgba(26,31,58,0.8) 0%, rgba(26,31,58,0.2) 40%, transparent 80%)"
-                        ]
                     }}
                     transition={{
                         duration: 12,
                         repeat: Infinity,
                         ease: "easeInOut"
                     }}
-                    className="absolute w-[120vw] h-[100vh] max-w-[1400px] max-h-[900px] rounded-full blur-[140px]"
+                    className="absolute w-[120vw] h-[100vh] max-w-[1400px] max-h-[900px] rounded-full blur-[100px]"
+                    style={{
+                        backgroundImage: "radial-gradient(ellipse at center, rgba(30,36,72,0.8) 0%, rgba(30,36,72,0.2) 40%, transparent 80%)",
+                        willChange: "transform, opacity",
+                        transform: "translateZ(0)",
+                    }}
                 />
 
-                {/* Layer 2: Core Focused Glow behind Headline (Violet-blue depth) */}
+                {/* Layer 2: Core Focused Glow behind Headline — GPU-composited opacity+scale only */}
                 <motion.div
                     animate={{
                         opacity: [0.2, 0.3, 0.2],
                         scale: [0.98, 1.02, 0.98],
-                        backgroundImage: [
-                            "radial-gradient(ellipse at center, rgba(37,43,92,0.8) 0%, rgba(26,31,58,0.3) 40%, transparent 70%)",
-                            "radial-gradient(ellipse at center, rgba(45,50,105,0.8) 0%, rgba(37,43,92,0.3) 40%, transparent 70%)",
-                            "radial-gradient(ellipse at center, rgba(37,43,92,0.8) 0%, rgba(26,31,58,0.3) 40%, transparent 70%)"
-                        ]
                     }}
                     transition={{
                         duration: 15,
@@ -57,7 +52,12 @@ export function Hero() {
                         ease: "easeInOut",
                         delay: 1
                     }}
-                    className="absolute top-[20%] w-[600px] h-[500px] md:w-[900px] md:h-[600px] rounded-full blur-[120px]"
+                    className="absolute top-[20%] w-[600px] h-[500px] md:w-[900px] md:h-[600px] rounded-full blur-[80px]"
+                    style={{
+                        backgroundImage: "radial-gradient(ellipse at center, rgba(40,46,98,0.8) 0%, rgba(30,36,72,0.3) 40%, transparent 70%)",
+                        willChange: "transform, opacity",
+                        transform: "translateZ(0)",
+                    }}
                 />
             </div>
 

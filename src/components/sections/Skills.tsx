@@ -63,7 +63,8 @@ export function Skills() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
                     >
                         Technical Arsenal.
@@ -72,15 +73,15 @@ export function Skills() {
                     <motion.div
                         initial={{ opacity: 0, scaleX: 0 }}
                         whileInView={{ opacity: 1, scaleX: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1, duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="w-24 h-[1px] bg-accent-blue shadow-[0_0_12px_rgba(58,109,255,0.8)] mx-auto mb-6"
                     />
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.15 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.15, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="text-lg text-zinc-400"
                     >
                         A comprehensive toolkit designed for building scalable, high-performance applications from the ground up.
@@ -91,7 +92,7 @@ export function Skills() {
                     variants={container}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true, amount: 0.1 }}
                     className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
                     {skillCategories.map((category, index) => (

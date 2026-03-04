@@ -16,7 +16,7 @@ export function About() {
 
             {/* Subtle Architectural Glow */}
             <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-end">
-                <div className="w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[120px] translate-x-1/3" />
+                <div className="w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[80px] translate-x-1/3 glow-layer" />
             </div>
 
             <div className="container px-6 md:px-12 mx-auto relative z-10">
@@ -25,8 +25,8 @@ export function About() {
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="order-2 md:order-1"
                     >
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
@@ -61,10 +61,10 @@ export function About() {
 
                     {/* Abstract Image or Element */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="order-1 md:order-2 relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden glass-card border-white/10"
                     >
                         <Image
