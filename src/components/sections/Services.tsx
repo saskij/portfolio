@@ -79,10 +79,10 @@ export function Services() {
                                     transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
                                 }
                             }}
-                            className="bg-black border border-white/5 rounded-3xl p-8 hover:border-white/10 hover:bg-zinc-900/50 transition-all duration-300 group relative overflow-hidden"
+                            className="bg-black border border-white/5 rounded-3xl p-8 hover:border-accent-amber/40 hover:shadow-[0_0_25px_rgba(245,166,35,0.15)] transition-all duration-300 group relative overflow-hidden"
                         >
                             {/* Hover Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-accent-amber/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                             <div className="mb-6 p-4 bg-white/5 rounded-2xl w-fit border border-white/5 group-hover:scale-110 transition-transform duration-500">
                                 {service.icon}
