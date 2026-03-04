@@ -114,8 +114,8 @@ export function ProjectGrid() {
                                     sizes="(max-width: 768px) 100vw, 60vw"
                                     className="object-cover object-top transition-transform duration-700 ease-[0.21,0.47,0.32,0.98] group-hover:scale-[1.05] z-10"
                                 />
-                                {/* Subtle electric blue overlay on hover */}
-                                <div className="absolute inset-0 bg-accent-blue/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none mix-blend-screen" />
+                                {/* Subtle amber overlay on hover */}
+                                <div className="absolute inset-0 bg-accent-amber/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none mix-blend-screen" />
                             </a>
 
                             {/* Content Side - 40% width on Desktop */}
