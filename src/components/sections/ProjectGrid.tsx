@@ -100,23 +100,22 @@ export function ProjectGrid() {
                             className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-20 items-start`}
                         >
                             {/* Image Side - 60% width on Desktop */}
-                            <motion.a
+                            <a
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                whileHover={{ scale: 1.01 }}
-                                className="w-full md:w-[60%] group relative aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5 transition-all duration-500"
+                                className="w-full md:w-[60%] group relative aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5"
                             >
                                 <Image
                                     src={getAssetPath(item.image)}
                                     alt={item.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 60vw"
-                                    className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out transform-gpu will-change-transform z-10"
+                                    className="object-cover object-top transition-transform duration-700 ease-[0.21,0.47,0.32,0.98] group-hover:scale-[1.05] z-10"
                                 />
                                 {/* Subtle electric blue overlay on hover */}
                                 <div className="absolute inset-0 bg-accent-blue/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none mix-blend-screen" />
-                            </motion.a>
+                            </a>
 
                             {/* Content Side - 40% width on Desktop */}
                             <div className="w-full md:w-[40%] flex flex-col gap-6 md:gap-8">
