@@ -105,7 +105,7 @@ export function ProjectGrid() {
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full md:w-[60%] group relative aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5"
+                                className="w-full md:w-[60%] group relative aspect-[16/10] rounded-[24px] overflow-hidden bg-zinc-900 border border-white/5 hover:border-accent-amber/40 hover:shadow-[0_0_25px_rgba(245,166,35,0.15)] transition-all duration-500"
                             >
                                 <Image
                                     src={getAssetPath(item.image)}
@@ -114,8 +114,6 @@ export function ProjectGrid() {
                                     sizes="(max-width: 768px) 100vw, 60vw"
                                     className="object-cover object-top transition-transform duration-700 ease-[0.21,0.47,0.32,0.98] group-hover:scale-[1.05] z-10"
                                 />
-                                {/* Subtle amber overlay on hover */}
-                                <div className="absolute inset-0 bg-accent-amber/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none mix-blend-screen" />
                             </a>
 
                             {/* Content Side - 40% width on Desktop */}

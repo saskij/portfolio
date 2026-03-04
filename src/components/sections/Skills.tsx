@@ -90,7 +90,6 @@ export function Skills() {
                     {skillCategories.map((category, index) => (
                         <motion.div key={index} variants={item}>
                             <Card className="h-full bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 border-white/5 hover:border-accent-amber/40 hover:shadow-[0_0_25px_rgba(245,166,35,0.15)] group relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-accent-amber/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="p-3 rounded-xl bg-white/5 border border-white/10">
                                         {category.icon}
