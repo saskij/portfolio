@@ -69,14 +69,6 @@ export function Skills() {
                     >
                         Technical Arsenal.
                     </motion.h2>
-                    {/* Electric Blue Underline */}
-                    <motion.div
-                        initial={{ opacity: 0, scaleX: 0 }}
-                        whileInView={{ opacity: 1, scaleX: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ delay: 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                        className="w-24 h-[1px] bg-accent-blue shadow-[0_0_12px_rgba(58,109,255,0.8)] mx-auto mb-6"
-                    />
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -97,8 +89,8 @@ export function Skills() {
                 >
                     {skillCategories.map((category, index) => (
                         <motion.div key={index} variants={item}>
-                            <Card className="h-full bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 border-white/5 hover:border-accent-blue/40 hover:shadow-[0_0_25px_rgba(58,109,255,0.15)] group relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <Card className="h-full bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 border-white/5 hover:border-accent-amber/40 hover:shadow-[0_0_25px_rgba(245,166,35,0.15)] group relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-accent-amber/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="p-3 rounded-xl bg-white/5 border border-white/10">
                                         {category.icon}
@@ -114,7 +106,7 @@ export function Skills() {
                         </motion.div>
                     ))}
                 </motion.div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 }
